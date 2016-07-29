@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39D434681D4B3ABB001020BE /* UpdateManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D434671D4B3ABB001020BE /* UpdateManage.m */; };
 		39FBDD0E1D3E2CA400D813DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBDD0D1D3E2CA400D813DB /* main.m */; };
 		39FBDD111D3E2CA400D813DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBDD101D3E2CA400D813DB /* AppDelegate.m */; };
 		39FBDD141D3E2CA400D813DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBDD131D3E2CA400D813DB /* ViewController.m */; };
@@ -15,7 +16,6 @@
 		39FBDD1C1D3E2CA400D813DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39FBDD1A1D3E2CA400D813DB /* LaunchScreen.storyboard */; };
 		39FBDD271D3E2CA400D813DB /* UpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBDD261D3E2CA400D813DB /* UpTests.m */; };
 		39FBDD321D3E2CA400D813DB /* UpUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBDD311D3E2CA400D813DB /* UpUITests.m */; };
-		39FBDD411D3E2DC700D813DB /* UpdateManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBDD401D3E2DC700D813DB /* UpdateManage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39D434661D4B3ABB001020BE /* UpdateManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateManage.h; sourceTree = "<group>"; };
+		39D434671D4B3ABB001020BE /* UpdateManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateManage.m; sourceTree = "<group>"; };
 		39FBDD091D3E2CA400D813DB /* Up.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Up.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39FBDD0D1D3E2CA400D813DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		39FBDD0F1D3E2CA400D813DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -52,8 +54,6 @@
 		39FBDD2D1D3E2CA400D813DB /* UpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39FBDD311D3E2CA400D813DB /* UpUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UpUITests.m; sourceTree = "<group>"; };
 		39FBDD331D3E2CA400D813DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		39FBDD3F1D3E2DC700D813DB /* UpdateManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateManage.h; sourceTree = "<group>"; };
-		39FBDD401D3E2DC700D813DB /* UpdateManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateManage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +81,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39D434651D4B3ABB001020BE /* UpdateManage */ = {
+			isa = PBXGroup;
+			children = (
+				39D434661D4B3ABB001020BE /* UpdateManage.h */,
+				39D434671D4B3ABB001020BE /* UpdateManage.m */,
+			);
+			path = UpdateManage;
+			sourceTree = "<group>";
+		};
 		39FBDD001D3E2CA400D813DB = {
 			isa = PBXGroup;
 			children = (
@@ -108,8 +117,7 @@
 				39FBDD101D3E2CA400D813DB /* AppDelegate.m */,
 				39FBDD121D3E2CA400D813DB /* ViewController.h */,
 				39FBDD131D3E2CA400D813DB /* ViewController.m */,
-				39FBDD3F1D3E2DC700D813DB /* UpdateManage.h */,
-				39FBDD401D3E2DC700D813DB /* UpdateManage.m */,
+				39D434651D4B3ABB001020BE /* UpdateManage */,
 				39FBDD151D3E2CA400D813DB /* Main.storyboard */,
 				39FBDD181D3E2CA400D813DB /* Assets.xcassets */,
 				39FBDD1A1D3E2CA400D813DB /* LaunchScreen.storyboard */,
@@ -276,7 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39FBDD141D3E2CA400D813DB /* ViewController.m in Sources */,
-				39FBDD411D3E2DC700D813DB /* UpdateManage.m in Sources */,
+				39D434681D4B3ABB001020BE /* UpdateManage.m in Sources */,
 				39FBDD111D3E2CA400D813DB /* AppDelegate.m in Sources */,
 				39FBDD0E1D3E2CA400D813DB /* main.m in Sources */,
 			);
@@ -420,6 +428,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Up/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bamq.sh.Up;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -431,6 +440,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Up/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bamq.sh.Up;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -502,6 +512,7 @@
 				39FBDD381D3E2CA400D813DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		39FBDD391D3E2CA400D813DB /* Build configuration list for PBXNativeTarget "UpTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +521,7 @@
 				39FBDD3B1D3E2CA400D813DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		39FBDD3C1D3E2CA400D813DB /* Build configuration list for PBXNativeTarget "UpUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +530,7 @@
 				39FBDD3E1D3E2CA400D813DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
