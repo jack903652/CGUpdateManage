@@ -38,7 +38,7 @@
 /* Begin PBXFileReference section */
 		39D434661D4B3ABB001020BE /* UpdateManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateManage.h; sourceTree = "<group>"; };
 		39D434671D4B3ABB001020BE /* UpdateManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateManage.m; sourceTree = "<group>"; };
-		39FBDD091D3E2CA400D813DB /* Up.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Up.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		39FBDD091D3E2CA400D813DB /* CGUpdateManage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGUpdateManage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39FBDD0D1D3E2CA400D813DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		39FBDD0F1D3E2CA400D813DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		39FBDD101D3E2CA400D813DB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -48,10 +48,10 @@
 		39FBDD181D3E2CA400D813DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39FBDD1B1D3E2CA400D813DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39FBDD1D1D3E2CA400D813DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		39FBDD221D3E2CA400D813DB /* UpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		39FBDD221D3E2CA400D813DB /* CGUpdateManage.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CGUpdateManage.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39FBDD261D3E2CA400D813DB /* UpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UpTests.m; sourceTree = "<group>"; };
 		39FBDD281D3E2CA400D813DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		39FBDD2D1D3E2CA400D813DB /* UpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		39FBDD2D1D3E2CA400D813DB /* CGUpdateManage.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CGUpdateManage.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39FBDD311D3E2CA400D813DB /* UpUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UpUITests.m; sourceTree = "<group>"; };
 		39FBDD331D3E2CA400D813DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,9 +103,9 @@
 		39FBDD0A1D3E2CA400D813DB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				39FBDD091D3E2CA400D813DB /* Up.app */,
-				39FBDD221D3E2CA400D813DB /* UpTests.xctest */,
-				39FBDD2D1D3E2CA400D813DB /* UpUITests.xctest */,
+				39FBDD091D3E2CA400D813DB /* CGUpdateManage.app */,
+				39FBDD221D3E2CA400D813DB /* CGUpdateManage.xctest */,
+				39FBDD2D1D3E2CA400D813DB /* CGUpdateManage.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,9 +156,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		39FBDD081D3E2CA400D813DB /* Up */ = {
+		39FBDD081D3E2CA400D813DB /* CGUpdateManage */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 39FBDD361D3E2CA400D813DB /* Build configuration list for PBXNativeTarget "Up" */;
+			buildConfigurationList = 39FBDD361D3E2CA400D813DB /* Build configuration list for PBXNativeTarget "CGUpdateManage" */;
 			buildPhases = (
 				39FBDD051D3E2CA400D813DB /* Sources */,
 				39FBDD061D3E2CA400D813DB /* Frameworks */,
@@ -168,14 +168,14 @@
 			);
 			dependencies = (
 			);
-			name = Up;
+			name = CGUpdateManage;
 			productName = Up;
-			productReference = 39FBDD091D3E2CA400D813DB /* Up.app */;
+			productReference = 39FBDD091D3E2CA400D813DB /* CGUpdateManage.app */;
 			productType = "com.apple.product-type.application";
 		};
-		39FBDD211D3E2CA400D813DB /* UpTests */ = {
+		39FBDD211D3E2CA400D813DB /* CGUpdateManageTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 39FBDD391D3E2CA400D813DB /* Build configuration list for PBXNativeTarget "UpTests" */;
+			buildConfigurationList = 39FBDD391D3E2CA400D813DB /* Build configuration list for PBXNativeTarget "CGUpdateManageTests" */;
 			buildPhases = (
 				39FBDD1E1D3E2CA400D813DB /* Sources */,
 				39FBDD1F1D3E2CA400D813DB /* Frameworks */,
@@ -186,14 +186,14 @@
 			dependencies = (
 				39FBDD241D3E2CA400D813DB /* PBXTargetDependency */,
 			);
-			name = UpTests;
+			name = CGUpdateManageTests;
 			productName = UpTests;
-			productReference = 39FBDD221D3E2CA400D813DB /* UpTests.xctest */;
+			productReference = 39FBDD221D3E2CA400D813DB /* CGUpdateManage.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		39FBDD2C1D3E2CA400D813DB /* UpUITests */ = {
+		39FBDD2C1D3E2CA400D813DB /* CGUpdateManageUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 39FBDD3C1D3E2CA400D813DB /* Build configuration list for PBXNativeTarget "UpUITests" */;
+			buildConfigurationList = 39FBDD3C1D3E2CA400D813DB /* Build configuration list for PBXNativeTarget "CGUpdateManageUITests" */;
 			buildPhases = (
 				39FBDD291D3E2CA400D813DB /* Sources */,
 				39FBDD2A1D3E2CA400D813DB /* Frameworks */,
@@ -204,9 +204,9 @@
 			dependencies = (
 				39FBDD2F1D3E2CA400D813DB /* PBXTargetDependency */,
 			);
-			name = UpUITests;
+			name = CGUpdateManageUITests;
 			productName = UpUITests;
-			productReference = 39FBDD2D1D3E2CA400D813DB /* UpUITests.xctest */;
+			productReference = 39FBDD2D1D3E2CA400D813DB /* CGUpdateManage.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -231,7 +231,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 39FBDD041D3E2CA400D813DB /* Build configuration list for PBXProject "Up" */;
+			buildConfigurationList = 39FBDD041D3E2CA400D813DB /* Build configuration list for PBXProject "CGUpdateManage" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -244,9 +244,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				39FBDD081D3E2CA400D813DB /* Up */,
-				39FBDD211D3E2CA400D813DB /* UpTests */,
-				39FBDD2C1D3E2CA400D813DB /* UpUITests */,
+				39FBDD081D3E2CA400D813DB /* CGUpdateManage */,
+				39FBDD211D3E2CA400D813DB /* CGUpdateManageTests */,
+				39FBDD2C1D3E2CA400D813DB /* CGUpdateManageUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -311,12 +311,12 @@
 /* Begin PBXTargetDependency section */
 		39FBDD241D3E2CA400D813DB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 39FBDD081D3E2CA400D813DB /* Up */;
+			target = 39FBDD081D3E2CA400D813DB /* CGUpdateManage */;
 			targetProxy = 39FBDD231D3E2CA400D813DB /* PBXContainerItemProxy */;
 		};
 		39FBDD2F1D3E2CA400D813DB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 39FBDD081D3E2CA400D813DB /* Up */;
+			target = 39FBDD081D3E2CA400D813DB /* CGUpdateManage */;
 			targetProxy = 39FBDD2E1D3E2CA400D813DB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -431,7 +431,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bamq.sh.Up;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CGUpdateManage;
 			};
 			name = Debug;
 		};
@@ -443,7 +443,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bamq.sh.Up;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CGUpdateManage;
 			};
 			name = Release;
 		};
@@ -454,8 +454,8 @@
 				INFOPLIST_FILE = UpTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bamq.sh.UpTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Up.app/Up";
+				PRODUCT_NAME = CGUpdateManage;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CGUpdateManage.app/CGUpdateManage";
 			};
 			name = Debug;
 		};
@@ -466,8 +466,8 @@
 				INFOPLIST_FILE = UpTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bamq.sh.UpTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Up.app/Up";
+				PRODUCT_NAME = CGUpdateManage;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CGUpdateManage.app/CGUpdateManage";
 			};
 			name = Release;
 		};
@@ -477,7 +477,7 @@
 				INFOPLIST_FILE = UpUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bamq.sh.UpUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CGUpdateManage;
 				TEST_TARGET_NAME = Up;
 			};
 			name = Debug;
@@ -488,7 +488,7 @@
 				INFOPLIST_FILE = UpUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bamq.sh.UpUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CGUpdateManage;
 				TEST_TARGET_NAME = Up;
 			};
 			name = Release;
@@ -496,7 +496,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		39FBDD041D3E2CA400D813DB /* Build configuration list for PBXProject "Up" */ = {
+		39FBDD041D3E2CA400D813DB /* Build configuration list for PBXProject "CGUpdateManage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				39FBDD341D3E2CA400D813DB /* Debug */,
@@ -505,7 +505,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		39FBDD361D3E2CA400D813DB /* Build configuration list for PBXNativeTarget "Up" */ = {
+		39FBDD361D3E2CA400D813DB /* Build configuration list for PBXNativeTarget "CGUpdateManage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				39FBDD371D3E2CA400D813DB /* Debug */,
@@ -514,7 +514,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		39FBDD391D3E2CA400D813DB /* Build configuration list for PBXNativeTarget "UpTests" */ = {
+		39FBDD391D3E2CA400D813DB /* Build configuration list for PBXNativeTarget "CGUpdateManageTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				39FBDD3A1D3E2CA400D813DB /* Debug */,
@@ -523,7 +523,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		39FBDD3C1D3E2CA400D813DB /* Build configuration list for PBXNativeTarget "UpUITests" */ = {
+		39FBDD3C1D3E2CA400D813DB /* Build configuration list for PBXNativeTarget "CGUpdateManageUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				39FBDD3D1D3E2CA400D813DB /* Debug */,

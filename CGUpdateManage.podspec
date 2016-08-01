@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint Up.podspec' to ensure this is a
+#  Be sure to run `pod spec lint CGUpdateManage.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
@@ -15,8 +15,8 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "UpdateManage"
-  s.version      = "0.0.1"
+  s.name         = "CGUpdateManage"
+  s.version      = "0.0.3"
   s.summary      = "convenience way to manage update"
 
   # This description is used to generate tags and improve search results.
@@ -24,8 +24,7 @@ Pod::Spec.new do |s|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = <<-DESC
-                   DESC
+  s.description  = "convenience way to manage update version"
 
   s.homepage     = "https://github.com/jack903652/UpdateManage"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -52,9 +51,9 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "bamq" => “jack903652@163.com" }
-  # Or just: s.author    = "bamq"
-  # s.authors            = { "bamq" => "you@example.com" }
+  s.author             = { "jamk903652" => "jack903652@163.com" }
+  # Or just: s.author    = "jamk903652"
+  # s.authors            = { "jamk903652" => "you@example.com" }
   # s.social_media_url   = "http://twitter.com/bamq"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -79,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/jack903652/UpdateManage", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/jack903652/UpdateManage.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,8 +89,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  s.source_files  = "Up/UpdateManage/**/*.{h,m}"
+  # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -129,7 +128,7 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # s.requires_arc = true
+  s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
