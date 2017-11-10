@@ -24,6 +24,8 @@
     self =[super init];
     if (self) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateAction:) name:UIApplicationDidBecomeActiveNotification object:nil];
+        self.requiedHint = @"发现新的版本，请更新！";
+        self.optionalHint =@"发现新的版本，是否更新？";
     }
     return self;
 }
@@ -37,8 +39,8 @@
             switch (update) {
                 case UpdatePolicyRequired:
                 {
-                    _alertView =[[UIAlertView alloc] initWithTitle:@"提示" message:@"发现新的版本，请更新！" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-                    _alertView.tag = UPDATE_TAG;
+                    _alertView =[[UIAlertView alloc] initWithTitle:@"提示" message:self.requiedHint delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                    _alertView.tag = UPDATE_TAG+1;
                     _alertView.delegate =self;
                     [_alertView show];
                     
@@ -46,7 +48,7 @@
                     break;
                 case UpdatePolicyOptional:
                 {
-                    _alertView =[[UIAlertView alloc] initWithTitle:@"提示" message:@"发现新的版本，是否更新？" delegate:self cancelButtonTitle:@"更新" otherButtonTitles:@"取消", nil];
+                    _alertView =[[UIAlertView alloc] initWithTitle:@"提示" message:self.optionalHint delegate:self cancelButtonTitle:@"更新" otherButtonTitles:@"取消", nil];
                     _alertView.tag = UPDATE_TAG;
                     _alertView.delegate =self;
                     [_alertView show];
@@ -64,6 +66,13 @@
     if (alertView.tag == UPDATE_TAG) {
         if (buttonIndex ==0) {
             [[UIApplication sharedApplication] openURL:self.url];
+        }
+    }else if (alertView.tag == UPDATE_TAG +1){
+        if (buttonIndex ==0) {
+            [[UIApplication sharedApplication] openURL:self.url];
+            if (self.requiredExit) {
+                exit(0);
+            }
         }
     }
 }
