@@ -45,5 +45,5 @@ typedef NS_ENUM(NSUInteger, UpdatePolicy) {
 ///强制更新是否退出
 @property(nonatomic,assign)BOOL requiredExit;//default YES
 ///获取更新策略
-@property(nonatomic,copy)UpdatePolicy (^updateBlock)();
+@property(nonatomic,copy)UpdatePolicy (^updateBlock)(void);
 @end
