@@ -26,6 +26,7 @@
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateAction:) name:UIApplicationDidBecomeActiveNotification object:nil];
         self.requiedHint = @"发现新的版本，请更新！";
         self.optionalHint =@"发现新的版本，是否更新？";
+        self.requiredExit = YES;
     }
     return self;
 }

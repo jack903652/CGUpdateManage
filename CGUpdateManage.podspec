@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CGUpdateManage"
-  s.version      = "0.0.4"
+  s.version      = "0.0.6"
   s.summary      = "convenience way to manage update"
 
   # This description is used to generate tags and improve search results.
