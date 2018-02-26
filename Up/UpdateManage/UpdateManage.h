@@ -26,12 +26,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 typedef NS_ENUM(NSUInteger, UpdatePolicy) {
-    ///强制更新
-    UpdatePolicyRequired,
+    ///没有更新
+    UpdatePolicyNone = 0,
     ///可选更新
     UpdatePolicyOptional,
-    ///没有更新
-    UpdatePolicyNone,
+    ///强制更新
+    UpdatePolicyRequired,
 };
 
 @interface UpdateManage : NSObject<UIAlertViewDelegate>

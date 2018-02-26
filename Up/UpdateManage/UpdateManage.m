@@ -40,7 +40,7 @@
             switch (update) {
                 case UpdatePolicyRequired:
                 {
-                    _alertView =[[UIAlertView alloc] initWithTitle:@"提示" message:self.requiedHint delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                    _alertView =[[UIAlertView alloc] initWithTitle:@"更新提示" message:self.requiedHint delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
                     _alertView.tag = UPDATE_TAG+1;
                     _alertView.delegate =self;
                     [_alertView show];
@@ -49,7 +49,7 @@
                     break;
                 case UpdatePolicyOptional:
                 {
-                    _alertView =[[UIAlertView alloc] initWithTitle:@"提示" message:self.optionalHint delegate:self cancelButtonTitle:@"更新" otherButtonTitles:@"取消", nil];
+                    _alertView =[[UIAlertView alloc] initWithTitle:@"更新提示" message:self.optionalHint delegate:self cancelButtonTitle:@"更新" otherButtonTitles:@"取消", nil];
                     _alertView.tag = UPDATE_TAG;
                     _alertView.delegate =self;
                     [_alertView show];
