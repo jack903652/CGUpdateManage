@@ -8,10 +8,11 @@
 
 #import "UpdateManage.h"
 #define UPDATE_TAG 0xFF
+@interface UpdateManage()
+@property(nonatomic,strong)UIAlertView *alertView;
+@end
 @implementation UpdateManage
-{
-    UIAlertView *_alertView;
-}
+
 +(instancetype)manage{
     static UpdateManage *m;
     static dispatch_once_t onceToken;
@@ -31,7 +32,7 @@
     return self;
 }
 -(void)updateAction:(UIApplication *)application{
-    if ([_alertView isVisible]) {
+    if ([self.alertView isVisible]) {
         return;
     }
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -40,19 +41,19 @@
             switch (update) {
                 case UpdatePolicyRequired:
                 {
-                    _alertView =[[UIAlertView alloc] initWithTitle:@"更新提示" message:self.requiedHint delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-                    _alertView.tag = UPDATE_TAG+1;
-                    _alertView.delegate =self;
-                    [_alertView show];
+                    self.alertView =[[UIAlertView alloc] initWithTitle:@"更新提示" message:self.requiedHint delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                    self.alertView.tag = UPDATE_TAG+1;
+                    self.alertView.delegate =self;
+                    [self.alertView show];
                     
                 }
                     break;
                 case UpdatePolicyOptional:
                 {
-                    _alertView =[[UIAlertView alloc] initWithTitle:@"更新提示" message:self.optionalHint delegate:self cancelButtonTitle:@"更新" otherButtonTitles:@"取消", nil];
-                    _alertView.tag = UPDATE_TAG;
-                    _alertView.delegate =self;
-                    [_alertView show];
+                    self.alertView =[[UIAlertView alloc] initWithTitle:@"更新提示" message:self.optionalHint delegate:self cancelButtonTitle:@"更新" otherButtonTitles:@"取消", nil];
+                    self.alertView.tag = UPDATE_TAG;
+                    self.alertView.delegate =self;
+                    [self.alertView show];
                 }
                     break;
                 case UpdatePolicyNone:
