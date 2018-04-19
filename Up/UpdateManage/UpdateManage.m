@@ -13,7 +13,7 @@
 @end
 @implementation UpdateManage
 
-+(instancetype)manage{
++(instancetype)sharedManage{
     static UpdateManage *m;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

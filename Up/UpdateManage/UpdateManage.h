@@ -35,7 +35,7 @@ typedef NS_ENUM(NSUInteger, UpdatePolicy) {
 };
 
 @interface UpdateManage : NSObject<UIAlertViewDelegate>
-+(instancetype)manage;
++(instancetype)sharedManage;
 ///打开的链接地址
 @property(nonatomic,strong)NSURL *url;
 ///强制更新提示

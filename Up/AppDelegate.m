@@ -16,9 +16,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [UpdateManage manage].url =[NSURL URLWithString:@"http://www.baidu.com"];
-    [UpdateManage manage].optionalHint = @"cccccc";
-    [UpdateManage manage].updateBlock = ^{
+    [UpdateManage sharedManage].url =[NSURL URLWithString:@"http://www.baidu.com"];
+    [UpdateManage sharedManage].optionalHint = @"cccccc";
+    [UpdateManage sharedManage].updateBlock = ^{
         __block  UpdatePolicy policy = UpdatePolicyNone;
         dispatch_semaphore_t sem =dispatch_semaphore_create(0);
         
