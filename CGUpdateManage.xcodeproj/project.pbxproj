@@ -11,11 +11,11 @@
 		39D434681D4B3ABB001020BE /* UpdateManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D434671D4B3ABB001020BE /* UpdateManage.m */; };
 		39F6364C21B13CB9009C5B71 /* CGUpdateManageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F6364321B13CB9009C5B71 /* CGUpdateManageKit.framework */; };
 		39F6365321B13CB9009C5B71 /* CGUpdateManageKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F6365221B13CB9009C5B71 /* CGUpdateManageKitTests.m */; };
-		39F6365521B13CB9009C5B71 /* CGUpdateManageKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 39F6364521B13CB9009C5B71 /* CGUpdateManageKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		39F6365821B13CB9009C5B71 /* CGUpdateManageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F6364321B13CB9009C5B71 /* CGUpdateManageKit.framework */; };
 		39F6365921B13CB9009C5B71 /* CGUpdateManageKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 39F6364321B13CB9009C5B71 /* CGUpdateManageKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		39F6366121B13CF3009C5B71 /* UpdateManage.h in Sources */ = {isa = PBXBuildFile; fileRef = 39D434661D4B3ABB001020BE /* UpdateManage.h */; };
 		39F6366221B13CF3009C5B71 /* UpdateManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D434671D4B3ABB001020BE /* UpdateManage.m */; };
+		39F6366A21B140E7009C5B71 /* UpdateManage.h in Headers */ = {isa = PBXBuildFile; fileRef = 39D434661D4B3ABB001020BE /* UpdateManage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		39FBDD0E1D3E2CA400D813DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBDD0D1D3E2CA400D813DB /* main.m */; };
 		39FBDD111D3E2CA400D813DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBDD101D3E2CA400D813DB /* AppDelegate.m */; };
 		39FBDD141D3E2CA400D813DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39FBDD131D3E2CA400D813DB /* ViewController.m */; };
@@ -251,7 +251,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39F6365521B13CB9009C5B71 /* CGUpdateManageKit.h in Headers */,
+				39F6366A21B140E7009C5B71 /* UpdateManage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
