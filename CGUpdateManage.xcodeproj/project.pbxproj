@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39A7DAE221B14D5600269388 /* CGUpdateManageKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 39F6364521B13CB9009C5B71 /* CGUpdateManageKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		39B5540A20885BA0002CF662 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B5540920885BA0002CF662 /* TestViewController.swift */; };
 		39D434681D4B3ABB001020BE /* UpdateManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D434671D4B3ABB001020BE /* UpdateManage.m */; };
 		39F6364C21B13CB9009C5B71 /* CGUpdateManageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F6364321B13CB9009C5B71 /* CGUpdateManageKit.framework */; };
@@ -251,6 +252,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39A7DAE221B14D5600269388 /* CGUpdateManageKit.h in Headers */,
 				39F6366A21B140E7009C5B71 /* UpdateManage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
