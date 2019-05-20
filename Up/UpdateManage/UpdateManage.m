@@ -10,6 +10,7 @@
 #define UPDATE_TAG 0xFF
 @interface UpdateManage()
 @property(nonatomic,strong)UIAlertView *alertView;
+@property(nonatomic,assign)BOOL optionalHintDidHint;
 @end
 @implementation UpdateManage
 
@@ -28,6 +29,7 @@
         self.requiedHint = @"发现新的版本，请更新！";
         self.optionalHint =@"发现新的版本，是否更新？";
         self.requiredExit = YES;
+        self.optionalHintOnce = YES;
     }
     return self;
 }
@@ -50,11 +52,14 @@
                     break;
                 case UpdatePolicyOptional:
                 {
-                    self.optionalHintDidHint = YES;
+                    if (self.optionalHintOnce && self.optionalHintDidHint) {
+                        return;
+                    }
                     self.alertView =[[UIAlertView alloc] initWithTitle:@"更新提示" message:self.optionalHint delegate:self cancelButtonTitle:@"更新" otherButtonTitles:@"取消", nil];
                     self.alertView.tag = UPDATE_TAG;
                     self.alertView.delegate =self;
                     [self.alertView show];
+                    self.optionalHintDidHint = YES;
                 }
                     break;
                 case UpdatePolicyNone:

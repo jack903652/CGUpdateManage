@@ -42,8 +42,8 @@ typedef NS_ENUM(NSUInteger, UpdatePolicy) {
 @property(nonatomic,copy)NSString *requiedHint;//default @"发现新的版本，请更新！"
 ///可选更新提示
 @property(nonatomic,copy)NSString *optionalHint;//default @"发现新的版本，是否更新？"
-///是不是已经做过可选更新提示
-@property(nonatomic,assign)BOOL optionalHintDidHint;
+///是不是已经做过可选更新提示,YES只提示一次,NO一直提示 default YES
+@property(nonatomic,assign)BOOL optionalHintOnce;
 ///强制更新是否退出
 @property(nonatomic,assign)BOOL requiredExit;//default YES
 ///获取更新策略
