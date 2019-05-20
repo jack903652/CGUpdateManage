@@ -50,6 +50,7 @@
                     break;
                 case UpdatePolicyOptional:
                 {
+                    self.optionalHintDidHint = YES;
                     self.alertView =[[UIAlertView alloc] initWithTitle:@"更新提示" message:self.optionalHint delegate:self cancelButtonTitle:@"更新" otherButtonTitles:@"取消", nil];
                     self.alertView.tag = UPDATE_TAG;
                     self.alertView.delegate =self;
