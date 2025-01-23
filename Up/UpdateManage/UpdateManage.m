@@ -9,7 +9,7 @@
 #import "UpdateManage.h"
 #define UPDATE_TAG 0xFF
 @interface UpdateManage()
-@property(nonatomic,strong)UIAlertView *alertView;
+@property(nonatomic,strong)UIAlertController *alertView;
 @property(nonatomic,assign)BOOL optionalHintDidHint;
 @end
 @implementation UpdateManage
@@ -34,7 +34,7 @@
     return self;
 }
 -(void)updateAction:(UIApplication *)application{
-    if ([self.alertView isVisible]) {
+    if (self.alertView) {
         return;
     }
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -43,11 +43,16 @@
             switch (update) {
                 case UpdatePolicyRequired:
                 {
-                    self.alertView =[[UIAlertView alloc] initWithTitle:@"更新提示" message:self.requiedHint delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-                    self.alertView.tag = UPDATE_TAG+1;
-                    self.alertView.delegate =self;
-                    [self.alertView show];
-                    
+                    self.alertView = [UIAlertController alertControllerWithTitle:@"更新提示" message:self.requiedHint preferredStyle:(UIAlertControllerStyleAlert)];
+                    UIAlertAction *confirm = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+                        [[UIApplication sharedApplication] openURL:self.url options:@{} completionHandler:nil];
+                        if (self.requiredExit) {
+                            exit(0);
+                        }
+                    }];
+                    [self.alertView addAction:confirm];
+                    UIWindow *window = [UIApplication sharedApplication].windows.firstObject;
+                    [window.rootViewController presentViewController:self.alertView animated:YES completion:nil];
                 }
                     break;
                 case UpdatePolicyOptional:
@@ -55,10 +60,15 @@
                     if (self.optionalHintOnce && self.optionalHintDidHint) {
                         return;
                     }
-                    self.alertView =[[UIAlertView alloc] initWithTitle:@"更新提示" message:self.optionalHint delegate:self cancelButtonTitle:@"更新" otherButtonTitles:@"取消", nil];
-                    self.alertView.tag = UPDATE_TAG;
-                    self.alertView.delegate =self;
-                    [self.alertView show];
+                    self.alertView = [UIAlertController alertControllerWithTitle:@"更新提示" message:self.optionalHint preferredStyle:(UIAlertControllerStyleAlert)];
+                    UIAlertAction *confirm = [UIAlertAction actionWithTitle:@"更新" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+                        [[UIApplication sharedApplication] openURL:self.url options:@{} completionHandler:nil];
+                    }];
+                    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleDefault) handler:nil];
+                    [self.alertView addAction:confirm];
+                    [self.alertView addAction:cancel];
+                    UIWindow *window = [UIApplication sharedApplication].windows.firstObject;
+                    [window.rootViewController presentViewController:self.alertView animated:YES completion:nil];
                     self.optionalHintDidHint = YES;
                 }
                     break;
@@ -70,19 +80,4 @@
         });
     });
 }
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if (alertView.tag == UPDATE_TAG) {
-        if (buttonIndex ==0) {
-            [[UIApplication sharedApplication] openURL:self.url];
-        }
-    }else if (alertView.tag == UPDATE_TAG +1){
-        if (buttonIndex ==0) {
-            [[UIApplication sharedApplication] openURL:self.url];
-            if (self.requiredExit) {
-                exit(0);
-            }
-        }
-    }
-}
-
 @end
