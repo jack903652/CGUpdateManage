@@ -45,10 +45,11 @@
                 {
                     self.alertView = [UIAlertController alertControllerWithTitle:@"更新提示" message:self.requiedHint preferredStyle:(UIAlertControllerStyleAlert)];
                     UIAlertAction *confirm = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
-                        [[UIApplication sharedApplication] openURL:self.url options:@{} completionHandler:nil];
-                        if (self.requiredExit) {
-                            exit(0);
-                        }
+                        [[UIApplication sharedApplication] openURL:self.url options:@{} completionHandler:^(BOOL success){
+                            if (self.requiredExit) {
+                                exit(0);
+                            }
+                        }];
                     }];
                     [self.alertView addAction:confirm];
                     UIWindow *window = [UIApplication sharedApplication].windows.firstObject;
